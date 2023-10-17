@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package pb;
+
+import "rpc_create_user.proto";
+
+option go_package = "github.com/aldisaputra17/go-micro/src/domain/pb";
+
+service UserService {
+    rpc CreateUser (CreateUserRequest) returns (CreateUserResponse) {}
+}

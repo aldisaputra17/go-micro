@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package pb;
+
+import "user.proto";
+
+option go_package = "github.com/aldisaputra17/go-micro/src/domain/pb";
+
+message CreateUserRequest {
+    string guid = 1;
+    string email = 2;
+    string password = 3;
+    string phone_number= 4;
+    string created_by = 5;
+}
+
+message CreateUserResponse {
+    User user = 1;
+}

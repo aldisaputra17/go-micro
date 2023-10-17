@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package pb;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/aldisaputra17/go-micro/src/domain/pb";
+
+message User {
+    string guid = 1;
+    string email = 2;
+    string password = 3;
+    string phone_number= 4;
+    google.protobuf.Timestamp created_at = 5;
+    string created_by = 6;
+    google.protobuf.Timestamp updated_at = 7;
+    string updated_by = 8;
+    google.protobuf.Timestamp deleted_at = 9;
+    string deleted_by = 10;
+}
