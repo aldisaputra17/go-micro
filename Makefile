@@ -42,4 +42,5 @@ proto:
 	rm -f pb/*.go
 	protoc --proto_path=src/domain/proto --go_out=src/domain/pb --go_opt=paths=source_relative \
     --go-grpc_out=src/domain/pb --go-grpc_opt=paths=source_relative \
+	--grpc-gateway_out=src/domain/pb --grpc-gateway_opt paths=source_relative \
     src/domain/proto/*.proto

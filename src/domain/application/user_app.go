@@ -12,4 +12,5 @@ func AddUserRoute(e *echo.Echo, m *module.Module) {
 	usrRoute := e.Group("/user")
 
 	usrRoute.POST("", createUser(svc))
+	usrRoute.POST("/login", LoginApp(svc))
 }

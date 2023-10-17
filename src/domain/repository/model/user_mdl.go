@@ -6,6 +6,7 @@ import (
 )
 
 type User struct {
+	ID          int64          `db:"id"`
 	GUID        string         `db:"guid"`
 	Email       string         `db:"email"`
 	Password    string         `db:"password"`

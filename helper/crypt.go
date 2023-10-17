@@ -27,3 +27,8 @@ func GeneratePassword(password string) (hash string, err error) {
 
 	return
 }
+
+func CompareHashPassword(hashPassword, reqPassword string) (err error) {
+	err = bcrypt.CompareHashAndPassword([]byte(hashPassword), []byte(reqPassword))
+	return
+}

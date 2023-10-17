@@ -14,6 +14,7 @@ import (
 	"github.com/pkg/errors"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
+	"google.golang.org/protobuf/types/known/timestamppb"
 )
 
 func (server *GRPCServer) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (res *pb.CreateUserResponse, err error) {
@@ -61,8 +62,8 @@ func (server *GRPCServer) CreateUser(ctx context.Context, req *pb.CreateUserRequ
 		User: &pb.User{
 			Guid:        usr.GUID,
 			Email:       usr.Email,
-			Password:    usr.Password,
 			PhoneNumber: usr.PhoneNumber,
+			CreatedAt:   timestamppb.New(usr.CreatedAt),
 			CreatedBy:   usr.CreatedBy,
 		},
 	}
