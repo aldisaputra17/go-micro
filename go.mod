@@ -15,6 +15,7 @@ require (
 	github.com/labstack/echo-contrib v0.15.0
 	github.com/labstack/echo/v4 v4.11.1
 	github.com/rs/zerolog v1.31.0
+	golang.org/x/crypto v0.13.0
 	golang.org/x/oauth2 v0.12.0
 	google.golang.org/grpc v1.53.0
 	google.golang.org/protobuf v1.31.0
@@ -46,7 +47,6 @@ require (
 	github.com/shopspring/decimal v1.3.1 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v1.2.2 // indirect
-	golang.org/x/crypto v0.13.0 // indirect
 	golang.org/x/net v0.15.0 // indirect
 	golang.org/x/sys v0.12.0 // indirect
 	golang.org/x/text v0.13.0 // indirect
